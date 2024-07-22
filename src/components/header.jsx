@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import Login from "../pages/loginpage";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -9,7 +11,7 @@ function Header() {
   return (
     <section className="header-section">
       <div className="headerpart">
-        <div className="logo">abi</div>
+        <div className="logo"><Link to={'/'}>abi</Link></div>
         <div className="searchbar">
           <input type="text" placeholder="Search items..." />
           <button className="s-1">
@@ -19,10 +21,10 @@ function Header() {
         <div className="items">
           <ul className={`ulitems ? ${isOpen ? "active" : ""}`}>
             <li>
-              <a href="">login/signup</a>
+            <Link to={"/login"}>Login </Link>  
             </li>
             <li>
-              <a href="">contact</a>
+              <a href="">Contact</a>
             </li>
             <li>
               <a href="">About</a>
