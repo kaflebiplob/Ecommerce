@@ -1,0 +1,142 @@
+/* form {
+    border: 3px solid #f1f1f1;
+    width: 80%;
+  }
+  form h1, h3{
+      text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #04aa6d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  span.psw {
+    float: right;
+    text-align: center;
+    padding-top: 16px;
+  }
+  
+  .psw a{
+     
+      color: black;
+      text-align: center;
+  }
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+   */
+.login-section {
+  /* background-color: black; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.loginContainer p {
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 300;
+}
+.login-section h1 {
+  text-align: center;
+  margin: 1rem 0;
+  color: #d8a263;
+}
+.loginContainer {
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(219, 211, 204, 0.856);
+  border: 2px solid white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.loginContainer form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.loginContainer form label {
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+.loginContainer input {
+  padding: 8px;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid #d8a263;
+}
+.loginContainer form button {
+  padding: 8px;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #fff;
+  margin: 1rem 0;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+
+.loginContainer form button:hover {
+  background-color: #d8a263;
+}
+@media (max-width: 1100px) {
+  .login-section {
+    background-color: white;
+  }
+  .loginContainer {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .login-section {
+    background-color: white;
+  }
+  .loginContainer {
+    width: auto;
+  }
+}
