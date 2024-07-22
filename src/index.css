@@ -11,7 +11,7 @@
   position: fixed;
 }
 .headerpart {
-  background-color: #d8a236;/* #eee8aa */
+  background-color: #d8a236; /* #eee8aa */
   height: 100px;
   display: flex;
   align-items: center;
@@ -71,7 +71,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 40px;
 }
 .bodypart,
 .h-img {
@@ -106,6 +105,64 @@
   background-color: #d8a263;
   border: 2px solid #d8a263;
 }
+/* ---------------------About part------------------ */
+.about-section {
+  width: 100%;
+}
+.aboutpart {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.intro-types {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.intro-tyres,
+.intro-batttries,
+.intro-lubricants {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 30px;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro-types img {
+  width: 200px;
+}
+.intro-types p,
+h2,
+h1,
+h3 {
+  margin: 1rem 0;
+}
+.intro-types h2 {
+  text-align: center;
+}
+.intro-types .btn-2 {
+  padding: 8px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  margin-top: 2rem;
+}
+.intro-types .btn-2:hover {
+  border: 2px solid #d8a236;
+  background-color: #d8a236;
+}
+.aboutpart .head-desc{
+  text-align: center;
+}
 
 /* --------------------- Footer--------------------- */
 .pagefooter-section {
@@ -136,11 +193,11 @@
   margin: 0 1.5rem;
   height: 300px;
 }
-.description .openingtime{
-    margin-top: 1rem;
+.description .openingtime {
+  margin-top: 1rem;
 }
-.info-type{
-    padding-top: 20px;
+.info-type {
+  padding-top: 20px;
 }
 .socialicons h1 {
   margin: 0;
@@ -176,6 +233,7 @@
 .socialicons h1 {
   padding-top: 20px;
 }
+
 @media (max-width: 1200px) {
   .searchbar input {
     width: 350px;

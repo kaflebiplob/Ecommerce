@@ -27,7 +27,7 @@ function Header() {
               <a href="">Contact</a>
             </li>
             <li>
-              <a href="">About</a>
+              <Link to={"/aboutus"}>About</Link>
             </li>
             <li>
               <a href="">shop</a>
