@@ -5,18 +5,21 @@
 }
 
 /* ---------Header------------- */
+
 .header-section {
   width: 100%;
   top: 0;
   position: fixed;
+  z-index: 100;
 }
-.bodypart{
+.bodypart {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.bodypart .body-h1,.body-p{
+.bodypart .body-h1,
+.body-p {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -47,7 +50,6 @@
   border: transparent;
   cursor: pointer;
   background: none;
- 
 }
 
 .items ul {
@@ -80,6 +82,63 @@
 .home-section {
   width: 100%;
 }
+.main-section {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 80%;
+  margin: 8rem 0 0 8rem ;
+}
+.images {
+  position: relative;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-slider {
+  margin-top: 8rem;
+}
+.images img {
+  position: absolute;
+  top: 0;
+  margin-top: 3rem;
+  width: 100%;
+  height: 80%;
+}
+.images .slider{
+  width: 80%;
+  height: 100%;
+}
+.images .slider img{
+  width: 80%;
+} 
+.leftarrow,
+.rightarrow {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+
+.rightarrow span {
+  display: block;
+  height: 30px;
+  align-content: center;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.leftarrow span {
+  display: block;
+  height: 30px;
+  align-content: center;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+}
 .homepart {
   display: flex;
   justify-content: space-around;
@@ -99,7 +158,7 @@
   width: 100%;
 }
 .homepart {
-  margin-top: 8rem;
+  margin-top: 3rem;
 }
 .bodypart p {
   margin-bottom: 2rem;
@@ -112,7 +171,7 @@
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.bodypart button a{
+.bodypart button a {
   color: white;
   text-decoration: none;
 }
@@ -362,6 +421,10 @@ textarea {
   .headerpart .logo {
     font-size: 20px;
   }
+  .main-section{
+    width: 100%;
+    margin:  8rem auto auto auto ;
+  }
   .pagefooter-section {
     margin-top: 2rem;
   }
@@ -401,6 +464,7 @@ textarea {
     justify-content: space-between;
     padding: 0 20px;
   }
+
   .items {
     position: absolute;
     background-color: #d8a236;
@@ -448,7 +512,7 @@ textarea {
   }
   .bodypart h1 {
     font-size: 20px;
-    margin: 0 ;
+    margin: 0;
     padding: 0;
     margin-bottom: 1rem;
   }
