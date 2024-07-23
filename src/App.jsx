@@ -9,6 +9,7 @@ import About from './components/About'
 import Contact from './components/contact'
 import Shop from './components/product'
 import Footer from './components/footer'
+import Register from './pages/registerpage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,13 +20,16 @@ function App() {
  <Router> 
  
   <Routes>
-    <Route path='/' element={<Home/>}/>
+    <Route path='/'  element={<Home/>}/>
+    <Route path='/home' element={<Home/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/aboutus' element={<About/>}/>
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/shop' element={<Shop/>}/>
+    <Route path='/register' element={<Register/>}/>
   </Routes>
  </Router>
+ 
  {/* <About/> */}
  </>
   )

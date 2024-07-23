@@ -10,6 +10,17 @@
   top: 0;
   position: fixed;
 }
+.bodypart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bodypart .body-h1,.body-p{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 .headerpart {
   background-color: #d8a236; /* #eee8aa */
   height: 100px;
@@ -36,7 +47,9 @@
   border: transparent;
   cursor: pointer;
   background: none;
+ 
 }
+
 .items ul {
   display: flex;
   align-items: center;
@@ -96,12 +109,14 @@
   border-radius: 4px;
   border: 2px solid black;
   background-color: black;
-  color: white;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.bodypart button:hover {
+.bodypart button a{
   color: white;
+  text-decoration: none;
+}
+.bodypart button:hover {
   background-color: #d8a263;
   border: 2px solid #d8a263;
 }
@@ -160,7 +175,7 @@ h3 {
   border: 2px solid #d8a236;
   background-color: #d8a236;
 }
-.aboutpart .head-desc{
+.aboutpart .head-desc {
   text-align: center;
 }
 
@@ -232,6 +247,111 @@ h3 {
 }
 .socialicons h1 {
   padding-top: 20px;
+}
+/* ------------------------Contact part ----------------------*/
+.contactname {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  margin-top: 8rem;
+}
+.contactname img {
+  width: 510px;
+  filter: grayscale(100%);
+}
+.intro h1 {
+  font-size: 35px;
+  text-align: center;
+}
+.intro h1 span {
+  color: #d8a236;
+}
+.getintouch {
+  margin-top: 5rem;
+}
+.getintouch p {
+  color: black;
+}
+.getintouch h1 {
+  font-size: 40px;
+  color: black;
+  text-align: center;
+}
+.getintouch span,
+h5 {
+  color: #d8a236;
+  text-align: center;
+  margin: 1rem 0;
+}
+.sendmessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sendmessage p,
+h1 {
+  color: black;
+  margin: 0rem 2rem;
+  /* padding: 20px; */
+}
+.sendmessage h1 {
+  margin-top: 6rem;
+}
+.contactform {
+  width: 50%;
+  display: block;
+  margin: 2rem;
+  padding: 20px;
+}
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+.contact-info .location,
+.email,
+.phonenum {
+  height: 100px;
+  text-align: center;
+  align-content: center;
+}
+.contactform label,
+input,
+textarea {
+  color: black;
+}
+.contactform input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+#country {
+  color: black;
+}
+#country option {
+  color: black;
+}
+.contactform button {
+  padding: 10px;
+  width: 100px;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  transition: 0.3s ease-in-out;
+}
+.contactform button:hover {
+  border: 2px solid #d8a236;
+  background-color: #d8a236;
 }
 
 @media (max-width: 1200px) {
@@ -328,6 +448,9 @@ h3 {
   }
   .bodypart h1 {
     font-size: 20px;
+    margin: 0 ;
+    padding: 0;
+    margin-bottom: 1rem;
   }
   .h-img {
     display: none;
@@ -353,5 +476,15 @@ h3 {
   .footer-contactinfo,
   .info-type {
     height: fit-content;
+  }
+  .contact-info {
+    flex-direction: column;
+  }
+  .sendmessage h1,
+  p {
+    margin: 0;
+  }
+  .contactform {
+    width: 100%;
   }
 }

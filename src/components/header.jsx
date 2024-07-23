@@ -20,17 +20,17 @@ function Header() {
         </div>
         <div className="items">
           <ul className={`ulitems ? ${isOpen ? "active" : ""}`}>
-            <li>
-            <Link to={"/login"}>Login </Link>  
+            <li style={{margin: 0, padding:0 }}>
+            <Link to={"/login"} style={{padding:0, margin:0}}>Login </Link>/<Link to={'/register'}  style={{padding:0, margin:0}}>register</Link>
             </li>
             <li>
-              <a href="">Contact</a>
+              <Link to={"/contact"}> Contact</Link>
             </li>
             <li>
               <Link to={"/aboutus"}>About</Link>
             </li>
             <li>
-              <a href="">shop</a>
+              <Link to={"/shop"}>Shop</Link>
             </li>
           </ul>
         </div>

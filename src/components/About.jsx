@@ -1,6 +1,6 @@
-import tyre from "/public/about-img.webp";
-import battries from "/public/about-battery-img.webp";
-import gulf from "/public/about-gulf-img.jpg";
+import tyre from "/about-img.webp";
+import battries from "/about-battery-img.webp";
+import gulf from "/about-gulf-img.jpg";
 import Footer from "./footer";
 import Header from "./header";
 function About() {

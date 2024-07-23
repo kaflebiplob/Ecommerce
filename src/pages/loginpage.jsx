@@ -2,11 +2,18 @@ import { useState } from "react";
 import "./loginandsignup.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const[showPassword, setShowPassword]= useState(false)
   const [errorMessage, setErrorMessage] = useState("");
+
+  function onshow(){
+    setShowPassword(!showPassword)
+  }
 
   const eventHandler = async (event) => {
     event.preventDefault();
@@ -37,6 +44,8 @@ function Login() {
   //   }
 
   return (
+    <>
+    <Header/>
     <div className="login-section">
       <div className="loginContainer">
         <h1>Login</h1>
@@ -49,16 +58,20 @@ function Login() {
             value={username}
             onChange={usernameHandler}
             required
-          />
+            />
           <label htmlFor="password">Password:</label>
           <input
-            type="password"
+            type={showPassword ? 'text' : 'password'}
             placeholder="Enter your password"
             value={password}
             onChange={passwordHandler}
             minLength={8}
             required
-          />
+            />
+            <label htmlFor=""> 
+            <input type="checkbox" onClick={onshow} />
+            show password
+            </label>
           <button className="submitbtn" type="submit">
             Login
           </button>
@@ -71,13 +84,15 @@ function Login() {
 
         <p>
           Not registered?
-          <a href="">
-            {" "}
+          <Link to={"/register"}>
           Create an account
-          </a>
+          </Link>
+          
         </p>
       </div>
     </div>
+    <Footer/>
+        </>
   );
 }
 export default Login;
