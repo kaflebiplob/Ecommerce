@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -11,14 +11,17 @@ app.use(express.json());
 
 // const PORT = process.env.PORT || 5000;
 
-mongoose.connect("mongodb://localhost:27017/ABITRADELINK");
+mongoose.connect("mongodb://localhost:27017/ABITRADELINK").catch((err) => {
+  console.log("Error connecting to MongoDB:", err);
+});
 
 app.listen(3001, () => {
   console.log("Server is connected");
 });
 
-app.post("/register",  (req, res) => {
-  usermodel
+app.post("/register", async (req, res) => {
+  const { username, password, email } = req.body;
+  await usermodel
     .create(req.body)
     .then((User) => res.json(User))
     .catch((err) => {
@@ -31,7 +34,7 @@ app.post("/register",  (req, res) => {
 });
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
-  usermodel.findOne({ username : username }).then((User) => {
+  usermodel.findOne({ username: username }).then((User) => {
     if (User) {
       if (password === User.password) {
         res.json("Success");

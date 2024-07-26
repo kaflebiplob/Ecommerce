@@ -18,7 +18,7 @@ function Register() {
   }
 
   const eventHandler = async (event) => {
-    axios
+   axios
       .post("http://localhost:3001/register", { username, email, password })
       .then((result) => {
         console.log(result);

@@ -5,11 +5,14 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import jktyre from "../assets/images/slider-tyre-img.webp";
 import mrfTyre from "../assets/images/slider-mrf-img.jpg";
+import amaroonbattery from "../assets/images/slider-battrey-image.png"
+import gulf from "../assets/images/slider-gulf-img.png"
+import ceat from "../assets/images/slider-ceat-img.webp"
 import { useState } from "react";
-const images = [jktyre, mrfTyre];
+const images = [jktyre, mrfTyre,amaroonbattery,gulf,ceat];
 
 function Home() {
-  const [currentImage, setCurrentImages] = useState(1);
+  const [currentImage, setCurrentImages] = useState(2);
   function nextImage() {
     setCurrentImages(currentImage === images.length - 1 ? 0 : currentImage + 1);
   }
@@ -21,6 +24,23 @@ function Home() {
     <>
       <Header />
       <div className="home-section">
+       
+        <div className="homepart">
+          <div className="bodypart">
+            <h1 className="body-h1">Welcome to abi trade link pvt ltd</h1>
+            <p className="body-p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+              mollitia vero aliquam assumenda labore. Voluptatibus pariatur
+              eveniet ducimus delectus rerum.
+            </p>
+            <button className="h-btm">
+              <Link to={"/shop"}> visit shop</Link>
+            </button>
+          </div>
+          <div className="h-img">
+            <img src="../homeimg.jpg" alt="" />
+          </div>
+        </div>
         <div className="main-section">
           <div className="leftarrow" onClick={prevImage}>
             <span>
@@ -43,22 +63,6 @@ function Home() {
               {" "}
               <FaArrowRight />
             </span>
-          </div>
-        </div>
-        <div className="homepart">
-          <div className="bodypart">
-            <h1 className="body-h1">Welcome to abi trade link pvt ltd</h1>
-            <p className="body-p">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              mollitia vero aliquam assumenda labore. Voluptatibus pariatur
-              eveniet ducimus delectus rerum.
-            </p>
-            <button className="h-btm">
-              <Link to={"/shop"}> visit shop</Link>
-            </button>
-          </div>
-          <div className="h-img">
-            <img src="../homeimg.jpg" alt="" />
           </div>
         </div>
       </div>
