@@ -8,6 +8,7 @@ import mrfTyre from "../assets/images/slider-mrf-img.jpg";
 import amaroonbattery from "../assets/images/slider-battrey-image.png"
 import gulf from "../assets/images/slider-gulf-img.png"
 import ceat from "../assets/images/slider-ceat-img.webp"
+
 import { useState } from "react";
 const images = [jktyre, mrfTyre,amaroonbattery,gulf,ceat];
 

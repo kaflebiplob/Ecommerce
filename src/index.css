@@ -89,7 +89,7 @@
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   max-width: 80%;
-  margin: 6rem 0 0 8rem ;
+  margin: 6rem 0 0 8rem;
 }
 .images {
   position: relative;
@@ -109,13 +109,13 @@
   width: 100%;
   height: 80%;
 }
-.images .slider{
+.images .slider {
   width: 80%;
   height: 100%;
 }
-.images .slider img{
+.images .slider img {
   width: 80%;
-} 
+}
 .leftarrow,
 .rightarrow {
   border: 1px solid black;
@@ -144,7 +144,6 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 8rem;
-  
 }
 .bodypart,
 .h-img {
@@ -206,6 +205,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.intro-types .btn-2 a {
+  color: #ccc;
+  text-decoration: none;
 }
 .intro-types img {
   width: 200px;
@@ -437,13 +440,13 @@ textarea {
   height: 450px;
 }
 .lists img {
-  width: 400px;
+  width: 250px;
   height: 350px;
   /* padding: 20px */
 }
 .lists h4 {
   color: black;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 800;
   margin: 0.4rem 0;
   transition: 0.3s ease-in-out;
@@ -475,6 +478,11 @@ textarea {
   margin-top: 5rem;
   text-decoration: underline;
 }
+.product-section h1 {
+  text-align: center;
+  color: #d8a236;
+  text-decoration: underline;
+}
 
 @media (max-width: 1200px) {
   .searchbar input {
@@ -484,9 +492,9 @@ textarea {
   .headerpart .logo {
     font-size: 20px;
   }
-  .main-section{
+  .main-section {
     width: 100%;
-    margin:  8rem auto auto auto ;
+    margin: 8rem auto auto auto;
   }
   .pagefooter-section {
     margin-top: 2rem;

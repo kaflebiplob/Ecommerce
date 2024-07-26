@@ -3,6 +3,7 @@ import battries from "/about-battery-img.webp";
 import gulf from "/about-gulf-img.jpg";
 import Footer from "./footer";
 import Header from "./header";
+import { Link } from "react-router-dom";
 function About() {
   return (
     <>
@@ -32,7 +33,7 @@ function About() {
             <div className="intro-image">
               <img src={tyre} alt="tyre" />
             </div>
-            <button className="btn-2">Tyres</button>
+            <button className="btn-2"> <Link to={"/shop"}>Tyres</Link></button>
           </div>
           <div className="intro-batttries">
             <h2>Battery</h2>
@@ -48,7 +49,7 @@ function About() {
             <div className="intro-image">
               <img src={battries} alt="battery" />
             </div>
-            <button className="btn-2">Battries</button>
+            <button className="btn-2"><Link to={"/shop"}>Battries</Link></button>
           </div>
           <div className="intro-lubricants">
             <h2>Lubricants</h2>
@@ -64,7 +65,7 @@ function About() {
             <div className="intro-image">
               <img src={gulf} alt="lubricants" />
             </div>
-            <button className="btn-2">lubricants</button>
+            <button className="btn-2"><Link to={"/shop"}>lubricants</Link></button>
           </div>
         </div>
       </div>
