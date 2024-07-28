@@ -1,37 +1,16 @@
 import Footer from "./footer";
 import Header from "./header";
-import fourWone from "../assets/product-img/IMG_1274.JPG";
-import fourWtwo from "../assets/product-img/IMG_1276.JPG";
-import fourWthree from "../assets/product-img/IMG_1277.JPG";
-import fourWfour from "../assets/product-img/IMG_1278.JPG";
-import fourWfive from "../assets/product-img/IMG_1279.JPG";
-import fourWsix from "../assets/product-img/IMG_1280.JPG";
-import fourWseven from "../assets/product-img/IMG_1282.JPG";
-import fourWeight from "../assets/product-img/IMG_1283.JPG";
-import batteryone from "../assets/product-img/IMG_1302.JPG";
-import batterytwo from "../assets/product-img/IMG_1303.JPG";
-import batterythree from "../assets/product-img/IMG_1304.JPG";
-import batteryfour from "../assets/product-img/IMG_1307.JPG";
-import lubricantsone from "../assets/product-img/IMG_1290.JPG";
-import lubricantstwo from "../assets/product-img/IMG_1291.JPG";
-import lubricantsthree from "../assets/product-img/IMG_1292.JPG";
-import lubricantsfour from "../assets/product-img/IMG_1293.JPG";
-import lubricantsfive from "../assets/product-img/IMG_1294.JPG";
-import lubricantssix from "../assets/product-img/IMG_1295.JPG";
-import lubricantsseven from "../assets/product-img/IMG_1296.JPG";
-import BASone from "../assets/product-img/IMG_1297.JPG";
-import BAStwo from "../assets/product-img/IMG_1298.JPG";
-import twoWone from "../assets/product-img/IMG_1269.JPG";
-import twoWtwo from "../assets/product-img/IMG_1270.JPG";
-import twoWthree from "../assets/product-img/IMG_1272.jpg";
-import twoWfour from "../assets/product-img/IMG_1284.JPG";
-import twoWfive from "../assets/product-img/IMG_1285.JPG";
-import twoWsix from "../assets/product-img/IMG_1287.JPG";
-import fourWnine from "../assets/product-img/IMG_1273.jpg";
-import fourWten from "../assets/product-img/IMG_1288.JPG";
-import fourWeleven from "../assets/product-img/IMG_1300.JPG";
 
-function Shop() {
+
+
+
+function Shop({ products }) {
+  //   const filterTyreProduct = Tyreproducts.filter((Tproduct)=>
+  //   Tproduct.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // )
+
+
+
   return (
     <>
       <Header />
@@ -51,7 +30,19 @@ function Shop() {
         <h2>On sale</h2>
         <h1 className="types">Four Wheelelers tyres</h1>
         <div className="product-lists">
-          <div className="lists">
+          {products.map((Tproduct) => (
+            <div className="lists" key={Tproduct.id}>
+              <a href="">
+                <img src={Tproduct.image} alt={Tproduct.name} />
+                <div className="details">
+                  <h4>{Tproduct.name}</h4>
+                  <span>{Tproduct.price}</span>
+                </div>
+              </a>
+            </div>
+          ))}
+
+          {/* <div className="lists">
             <a href="">
               <img src={fourWone} alt="" />
 
@@ -359,7 +350,7 @@ function Shop() {
                 <span>Rs:2800</span>
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
       <Footer />

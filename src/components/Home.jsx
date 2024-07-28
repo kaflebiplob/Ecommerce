@@ -14,6 +14,7 @@ const images = [jktyre, mrfTyre,amaroonbattery,gulf,ceat];
 
 function Home() {
   const [currentImage, setCurrentImages] = useState(2);
+
   function nextImage() {
     setCurrentImages(currentImage === images.length - 1 ? 0 : currentImage + 1);
   }
