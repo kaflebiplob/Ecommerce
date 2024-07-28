@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <>
-    <Header/>
+   
     <div className="about-section">
       <div className="aboutpart">
         <h1>ABI TRADE LINK PVT LTD</h1>

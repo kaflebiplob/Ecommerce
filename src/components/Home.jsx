@@ -24,7 +24,7 @@ function Home() {
 
   return (
     <>
-      <Header />
+     
       <div className="home-section">
        
         <div className="homepart">

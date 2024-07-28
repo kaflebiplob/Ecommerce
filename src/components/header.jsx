@@ -28,9 +28,6 @@ function Header({ setSearchQuery }) {
             placeholder="Search items..."
             onChange={handleSearch}
           />
-          <button className="s-1">
-            <CiSearch />
-          </button>
         </div>
         <div className="items">
           <ul className={`ulitems ${isOpen ? "active" : ""}`}>
