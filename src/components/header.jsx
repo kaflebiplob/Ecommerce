@@ -50,7 +50,7 @@ function Header({ setSearchQuery }) {
               <Link to={"/shop"}>Shop</Link>
             </li>
             <li>
-              <BiCart style={{ alignItems: "center", height: 18.4 }} />
+             <Link to={"/cart"}><BiCart style={{ alignItems: "center", height: 18.4 }} /></Link> 
             </li>
           </ul>
         </div>

@@ -14,6 +14,7 @@ import Header from "./components/header";
 import Home from "./components/Home";
 import Shop from "./components/product";
 import Login from "./pages/loginpage";
+import Cart from "./components/cart"
 import Register from "./pages/registerpage";
 
 const allProducts = [
@@ -26,9 +27,8 @@ const allProducts = [
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
-
-  // State to store the filtered products
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const[cartItems, setCartItems]=useState([])
   useEffect(() => {
     const afterFilter = allProducts
       .filter((product) =>
@@ -46,6 +46,9 @@ function App() {
       // After filtering the products, set the state
     setFilteredProducts(afterFilter);
   }, [searchQuery]);
+  const addToCart=(product)=>{
+    setCartItems([...cartItems,product])
+  }
 
   return ( <>
     {/* <Login/> */}
@@ -58,8 +61,9 @@ function App() {
         <Route path="/aboutus" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="/shop" element={<Shop products={filteredProducts} />} />   {/* pass the filtered items insted of the function*/}
+        <Route path="/shop" element={<Shop products={filteredProducts}  addToCart={addToCart}/>} />   {/* pass the filtered items insted of the function*/}
         <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<Cart cartItems={cartItems}/>} />
       </Routes>
     </Router>
 

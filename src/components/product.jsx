@@ -1,6 +1,6 @@
 import Footer from "./footer";
 
-function Shop({ products }) {
+function Shop({ products, addToCart }) {
    return (
     <>
      
@@ -21,13 +21,13 @@ function Shop({ products }) {
         <div className="product-lists">
           {products.map((Tproduct) => (
             <div className="lists" key={Tproduct.id}>
-              <a href="">
-                <img src={Tproduct.image} alt={Tproduct.name} />
+              
+                <img src={Tproduct.image} alt={Tproduct.name} onClick={()=>addToCart(Tproduct)} />
                 <div className="details">
                   <h4>{Tproduct.name}</h4>
                   <span>{Tproduct.price}</span>
                 </div>
-              </a>
+              
             </div>
           ))}
         </div>
