@@ -457,6 +457,21 @@ textarea {
   flex-direction: column;
   cursor: pointer;
 }
+.lists{
+  position: relative;
+}
+.lists button.addtocart{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 10px;
+}
 
 .lists  h4:hover {
   color: #d8a236;
@@ -516,6 +531,7 @@ textarea {
 .cart-item-details{
  margin-bottom: 2rem;
 }
+
 @media (max-width: 1200px) {
   .searchbar input {
     width: 350px;
@@ -559,10 +575,6 @@ textarea {
     padding: 30px;
     margin-top: 0;
   }
-  /* .product-container h1,
-  h2 {
-    font-size: 50px;
-  } */
   .product-section h2 {
     font-size: 40px;
   }

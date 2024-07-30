@@ -43,7 +43,7 @@ function App() {
           .includes(searchQuery.toLowerCase());
         return aIncludes === bIncludes ? 0 : aIncludes ? -1 : 1;
       });
-      // After filtering the products, set the state
+      
     setFilteredProducts(afterFilter);
   }, [searchQuery]);
   const addToCart=(product)=>{
@@ -61,7 +61,7 @@ function App() {
         <Route path="/aboutus" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="/shop" element={<Shop products={filteredProducts}  addToCart={addToCart}/>} />   {/* pass the filtered items insted of the function*/}
+        <Route path="/shop" element={<Shop products={filteredProducts}  addToCart={addToCart}/>} />   
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart cartItems={cartItems}/>} />
       </Routes>
